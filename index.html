@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- ICON -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/png/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/png/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/png/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/png/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/png/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/png/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/png/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/png/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="img/png/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="img/png/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="img/png/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/png/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="img/png/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Calculator" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="img/png/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="img/png/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="img/png/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="img/png/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="img/png/mstile-310x150.png" />
+    <!-- FONT: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="img/svg/logo.svg" alt="Calculator">
+        <h1>Calculator<span>.</span></h1>
+    </header>
+    <main>
+        <div class="calculator__container">
+            <div class="content__result">
+                <span class="result__formula" id="result__formula">0</span>
+                <span class="result" id="result">0</span>
+                <span class="result ghost__element">0</span>
+            </div>
+            <div class="content__button">
+                <div class="btn__row">
+                    
+                </div>
+                <div class="btn__row">
+                    <button class="btn btn__blue" id="btn__AC">AC</button>
+                    <button class="btn btn__blue" id="btn__BACKSPACE"><i class="ri-delete-back-2-line"></i></button>
+                    <button class="btn btn__blue" id="btn__PERCENT"><i class="ri-percent-line"></i></button>
+                    <button class="btn btn__blue"><i class="ri-divide-line"></i></button>
+                </div>
+                <div class="btn__row">
+                    <button class="btn" id="btn__num7">7</button>
+                    <button class="btn" id="btn__num8">8</button>
+                    <button class="btn" id="btn__num9">9</button>
+                    <button class="btn btn__blue"><i class="ri-close-fill"></i></button>
+                </div>
+                <div class="btn__row">
+                    <button class="btn" id="btn__num4">4</button>
+                    <button class="btn" id="btn__num5">5</button>
+                    <button class="btn" id="btn__num6">6</button>
+                    <button class="btn btn__blue"><i class="ri-subtract-fill"></i></button>
+                </div>
+                <div class="btn__row">
+                    <button class="btn" id="btn__num1">1</button>
+                    <button class="btn" id="btn__num2">2</button>
+                    <button class="btn" id="btn__num3">3</button>
+                    <button class="btn btn__blue"><i class="ri-add-line"></i></button>
+                </div>
+                <div class="btn__row">
+                    <button class="btn">.</button>
+                    <button class="btn" id="btn__num0">0</button>
+                    <button class="btn">-/+</button>
+                    <button class="btn btn__dark"><i class="ri-pause-mini-fill"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="/img/svg/blob.svg" alt="">
+        <p>Copyright &copy; 2023 Rizky Nandang Pratama. 672020063</p>
+        <p>Fakultas Teknologi Informasi</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+// ------ MIXIN ------
+@mixin flex($justify-content, $align-item, $flex-direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    flex-direction: $flex-direction;
+}
+
+// ------ COLOR ------
+$color_bg_main: #36393F;
+$color_bg_dark: #2A2C30;
+
+$color_btn_blue: #5A7BBB;
+$color_btn_dark: #335487;
+$color_btn_gray: #393E49;
+
+$color_font_main: #dddddd;
+$color_font_foot: #56585B;
+
+// ------ CSS BOX MODEL ------
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+// ------ CSS RESET ------
+body,
+h1,
+p {
+    margin: 0;
+}
+
+
+
+body {
+    @include flex(space-between, center, column);
+    gap: 2em;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color_bg_dark;
+    background-image: url("/img/svg/background.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // overflow: hidden;
+}
+
+header {
+    @include flex(center, center, null);
+    gap: 1.25em;
+
+    padding: 1.75em 1.75em 0;
+
+    img {
+        width: 2.5em;
+    }
+
+    h1 {
+        @include flex(center, center, null);
+        color: $color_font_main;
+        font-size: 1.5rem;
+
+        span {
+            color: $color_btn_blue;
+            font-size: 2.25rem;
+            justify-self: flex-start;
+        }
+    }
+}
+
+.calculator__container {
+    @include flex(center, center, column);
+
+    background-color: $color_bg_main;
+    border: 1px solid #6D6F73;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .content__result {
+        @include flex(null, center, column);
+        width: 100%;
+        padding: 1em 1em .25em;
+        
+        .result__formula {
+            align-self: flex-end;
+            color: $color_font_foot;
+            font-size: .95rem;
+            visibility: hidden;
+        }
+        .result {
+            // width: 100%;
+
+            align-self: flex-end;
+            color: $color_font_main;
+            font-size: 2.85rem;
+            font-weight: 600;
+            text-align: right;
+        }
+        .ghost__element {
+            position: absolute;
+            top: 0;
+            visibility: hidden;
+        }
+    }
+
+    .content__button {
+        @include flex(center, center, column);
+        background-color: $color_bg_dark;
+        width: 100%;
+        padding: .5em;
+
+        .btn__row {
+            @include flex(center, center, null);
+
+            .btn {
+                @include flex(center, center, null);
+                width: 4.375em;
+                height: 4.375em;
+                margin: .5em;
+                position: relative;
+                background-color: $color_btn_gray;
+                color: $color_font_main;
+                border: unset;
+                border-radius: 5px;
+                overflow: hidden;
+                font-size: 1rem;
+
+                i {
+                    font-size: 1.25rem;
+                }
+
+                .ri-pause-mini-fill {
+                    transform: rotate(90deg);
+                } 
+            }
+
+            .btn.btn__blue {
+                background-color: $color_btn_blue;
+            }
+
+            .btn.btn__dark {
+                background-color: $color_btn_dark;
+            }
+
+            .btn::after {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                transition: background-color .1s;
+            }
+
+            .btn:hover.btn::after {
+                background-color: rgba($color: #000000, $alpha: .2);
+            }
+        }
+    }
+}
+
+
+
+footer {
+    padding: 1em;
+    width: 100%;
+    background-color: $color_bg_dark;
+    position: relative;
+
+    img {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        z-index: -10;
+    }
+
+    p {
+        color: $color_font_foot;
+        font-size: .875rem;
+        line-height: 1.25em;
+        text-align: center;
+    }
+}
